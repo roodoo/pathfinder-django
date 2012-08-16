@@ -1,0 +1,275 @@
+[
+    {
+        "model": "skills.skill",
+        "pk": 1,
+        "fields": {
+            "name": "Acrobatics",
+            "description": "You can keep your balance while traversing narrow or treacherous surfaces. You can also dive, flip, jump, and roll to avoid attacks and overcome obstacles.",
+            "untrained": true,
+            "ability": "Dex",
+            "armor_check_penalty": true
+        }
+    },
+    {
+        "model": "skills.skill",
+        "pk": 2,
+        "fields": {
+            "name": "Appraise",
+            "description": "You can evaluate the monetary value of an object.",
+            "untrained": true,
+            "ability": "Int"
+        }
+    },
+    {
+        "model": "skills.skill",
+        "pk": 3,
+        "fields": {
+            "name": "Bluff",
+            "description": "You know how to tell a lie.",
+            "untrained": true,
+            "ability": "Cha"
+        }
+    },
+    {
+        "model": "skills.skill",
+        "pk": 4,
+        "fields": {
+            "name": "Climb",
+            "description": "You are skilled at scaling vertical surfaces, from smooth city walls to rocky cliffs.",
+            "untrained": true,
+            "ability": "Str",
+            "armor_check_penalty": true
+        }
+    },
+    {
+        "model": "skills.skill",
+        "pk": 5,
+        "fields": {
+            "name": "Craft",
+            "description": "You are skilled in the creation of a specific group of items, such as armor or weapons. Like Knowledge, Perform, and Profession, Craft is actually a number of separate skills. You could have several Craft skills, each with its own ranks. The most common Craft skills are alchemy, armor, baskets, books, bows, calligraphy, carpentry, cloth, clothing, glass, jewelry, leather, locks, paintings, pottery, sculptures, ships, shoes, stonemasonry, traps, and weapons.\nA Craft skill is specifically focused on creating something. If nothing is created by the endeavor, it probably falls under the heading of a Profession skill.",
+            "option": true,
+            "untrained": true,
+            "ability": "Int"
+        }
+    },
+    {
+        "model": "skills.skill",
+        "pk": 6,
+        "fields": {
+            "name": "Diplomacy",
+            "description": "You can use this skill to persuade others to agree with your arguments, to resolve differences, and to gather valuable information or rumors from people. This skill is also used to negotiate conflicts by using the proper etiquette and manners suitable to the problem.",
+            "untrained": true,
+            "ability": "Cha"
+        }
+    },
+    {
+        "model": "skills.skill",
+        "pk": 7,
+        "fields": {
+            "name": "Disable Device",
+            "description": "You are skilled at disarming traps and opening locks. In addition, this skill lets you sabotage simple mechanical devices, such as catapults, wagon wheels, and doors.",
+            "untrained": false,
+            "ability": "Dex",
+            "armor_check_penalty": true
+        }
+    },
+    {
+        "model": "skills.skill",
+        "pk": 8,
+        "fields": {
+            "name": "Disguise",
+            "description": "You are skilled at changing your appearance.",
+            "untrained": true,
+            "ability": "Cha"
+        }
+    },
+    {
+        "model": "skills.skill",
+        "pk": 9,
+        "fields": {
+            "name": "Escape Artist",
+            "description": "Your training allows you to slip out of bonds and escape from grapples.",
+            "untrained": true,
+            "ability": "Dex",
+            "armor_check_penalty": true
+        }
+    },
+    {
+        "model": "skills.skill",
+        "pk": 10,
+        "fields": {
+            "name": "Fly",
+            "description": "You are skilled at flying, through either the use of wings or magic, and can perform daring or complex maneuvers while airborne. Note that this skill does not give you the ability to fly.",
+            "untrained": true,
+            "ability": "Dex",
+            "armor_check_penalty": true
+        }
+    },
+    {
+        "model": "skills.skill",
+        "pk": 11,
+        "fields": {
+            "name": "Handle Animal",
+            "description": "You are trained at working with animals, and can teach them tricks, get them to follow your simple commands, or even domesticate them.",
+            "untrained": false,
+            "ability": "Cha"
+        }
+    },
+    {
+        "model": "skills.skill",
+        "pk": 12,
+        "fields": {
+            "name": "Heal",
+            "description": "You are skilled at tending to wounds and ailments.",
+            "untrained": true,
+            "ability": "Wis"
+        }
+    },
+    {
+        "model": "skills.skill",
+        "pk": 13,
+        "fields": {
+            "name": "Intimidate",
+            "description": "You can use this skill to frighten an opponent or to get them to act in a way that benefits you. This skill includes verbal threats and displays of prowess.",
+            "untrained": true,
+            "ability": "Cha"
+        }
+    },
+    {
+        "model": "skills.skill",
+        "pk": 14,
+        "fields": {
+            "name": "Knowledge",
+            "description": "You are educated in a field of study and can answer both simple and complex questions. Like the Craft, Perform, and Profession skills, Knowledge actually encompasses a number of different specialties.",
+            "option": true,
+            "untrained": false,
+            "ability": "Int"
+        }
+    },
+    {
+        "model": "skills.skill",
+        "pk": 15,
+        "fields": {
+            "name": "Linguistics",
+            "description": "You are skilled at working with language, in both its spoken and written forms. You can speak multiple languages, and can decipher nearly any tongue given enough time. Your skill in writing allows you to create and detect forgeries as well.",
+            "untrained": false,
+            "ability": "Int"
+        }
+    },
+    {
+        "model": "skills.skill",
+        "pk": 16,
+        "fields": {
+            "name": "Perception",
+            "description": "Your senses allow you to notice fine details and alert you to danger. Perception covers all five senses, including sight, hearing, touch, taste, and smell.",
+            "untrained": true,
+            "ability": "Wis"
+        }
+    },
+    {
+        "model": "skills.skill",
+        "pk": 17,
+        "fields": {
+            "name": "Perform",
+            "description": "You are skilled at one form of entertainment, from singing to acting to playing an instrument. Like Craft, Knowledge, and Profession, Perform is actually a number of separate skills. You could have several Perform skills, each with its own ranks. Act (comedy, drama, pantomime).",
+            "option": true,
+            "untrained": true,
+            "ability": "Cha"
+        }
+    },
+    {
+        "model": "skills.skill",
+        "pk": 18,
+        "fields": {
+            "name": "Profession",
+            "description": "You are skilled at a specific job. Like Craft, Knowledge, and Perform, Profession is actually a number of separate skills. You could have several Profession skills, each with its own ranks. While a Craft skill represents ability in creating an item, a Profession skill represents an aptitude in a vocation requiring a broader range of less specific knowledge. The most common Profession skills are architect, baker, barrister, brewer, butcher, clerk, cook, courtesan, driver, engineer, farmer, fisherman, gambler, gardener, herbalist, innkeeper, librarian, merchant, midwife, miller, miner, porter, sailor, scribe, shepherd, stable master, soldier, tanner, trapper, and woodcutter.",
+            "option": true,
+            "untrained": false,
+            "ability": "Wis"
+        }
+    },
+    {
+        "model": "skills.skill",
+        "pk": 19,
+        "fields": {
+            "name": "Ride",
+            "description": "You are skilled at riding mounts, usually a horse, but possibly something more exotic, like a griffon or pegasus. If you attempt to ride a creature that is ill suited as a mount, you take a –5 penalty on your Ride checks.",
+            "untrained": true,
+            "ability": "Dex",
+            "armor_check_penalty": true
+        }
+    },
+    {
+        "model": "skills.skill",
+        "pk": 20,
+        "fields": {
+            "name": "Sense Motive",
+            "description": "You are skilled at detecting falsehoods and true intentions.",
+            "untrained": true,
+            "ability": "Wis"
+        }
+    },
+    {
+        "model": "skills.skill",
+        "pk": 21,
+        "fields": {
+            "name": "Sleight of Hand",
+            "description": "Your training allows you to pick pockets, draw hidden weapons, and take a variety of actions without being noticed.",
+            "untrained": false,
+            "ability": "Dex",
+            "armor_check_penalty": true
+        }
+    },
+    {
+        "model": "skills.skill",
+        "pk": 22,
+        "fields": {
+            "name": "Spellcraft",
+            "description": "You are skilled at the art of casting spells, identifying magic items, crafting magic items, and identifying spells as they are being cast.",
+            "untrained": false,
+            "ability": "Int"
+        }
+    },
+    {
+        "model": "skills.skill",
+        "pk": 23,
+        "fields": {
+            "name": "Stealth",
+            "description": "You are skilled at avoiding detection, allowing you to slip past foes or strike from an unseen position. This skill covers hiding and moving silently.",
+            "untrained": true,
+            "ability": "Dex",
+            "armor_check_penalty": true
+        }
+    },
+    {
+        "model": "skills.skill",
+        "pk": 24,
+        "fields": {
+            "name": "Survival",
+            "description": "You are skilled at surviving in the wild and at navigating in the wilderness. You also excel at following trails and tracks left by others.",
+            "untrained": true,
+            "ability": "Wis"
+        }
+    },
+    {
+        "model": "skills.skill",
+        "pk": 25,
+        "fields": {
+            "name": "Swim",
+            "description": "You know how to swim and can do so even in stormy water.",
+            "untrained": true,
+            "ability": "Str",
+            "armor_check_penalty": true
+        }
+    },
+    {
+        "model": "skills.skill",
+        "pk": 26,
+        "fields": {
+            "name": "Use Magic Device",
+            "description": "You are skilled at activating magic items, even if you are not otherwise trained in their use.",
+            "untrained": false,
+            "ability": "Cha"
+        }
+    }
+]

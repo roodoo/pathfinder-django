@@ -1,0 +1,70 @@
+<h1>{{ spell }} <span style="font-size:70%;"><a href="{% url spells-edit spell.id %}">edit</a></span></h1>
+
+<strong>School</strong> 
+{{ spell.display_school }}
+
+<strong>Level</strong> 
+{% for spell_list in spell.spell_list.all %}
+    <a href="{% url spells-list spell_list.slug spell_list.level %}">{{ spell_list }}</a>
+    {% if not forloop.last %}, {% endif %}
+{% endfor %}
+
+<br />
+
+{% if spell.casting_time %}
+    <strong>Casting Time</strong>
+    {{ spell.casting_time }}
+    <br />
+{% endif %}
+
+{% if spell.components %}
+    <strong>Components</strong>
+    {{ spell.components }}
+    {% if spell.components_details %}
+        ( {{ spell.components_details }} )
+    {% endif %}
+    <br />
+{% endif %}
+
+{% if spell.spell_range %}
+    <strong>Range</strong>
+    {{ spell.spell_range }}
+    <br />
+{% endif %}
+
+{% if spell.target %}
+    <strong>Target</strong>
+    {{ spell.target }}
+    <br />
+{% endif %}
+
+{% if spell.area %}
+    <strong>Area</strong>
+    {{ spell.area }}
+    <br />
+{% endif %}
+
+
+{% if spell.duration %}
+    <strong>Duration</strong>
+    {{ spell.duration }}
+    <br />
+{% endif %}
+
+{% if spell.saving_throw %}
+    <strong>Saving Throw</strong>
+    {{ spell.saving_throw }}
+{% endif %}
+
+{% if spell.spell_resistance %}
+    <strong>Spell Resistance</strong>
+    {{ spell.spell_resistance }}
+{% endif %}
+
+{% if spell.saving_throw or spell.spell_resistance %}
+    <br />
+{% endif %}
+
+<p>
+    {{ spell.description }}
+</p>

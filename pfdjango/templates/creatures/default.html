@@ -1,0 +1,29 @@
+<html>
+    <head>
+
+        {% block extra_css %}
+        {% endblock %}
+
+        <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery-1.6.1.js"></script>
+        {% block extra_js %}
+        {% endblock %}
+    </head>
+    <body>
+        <h1><a href="{% url creatures %}">Creatures</a></h1>
+        {% block body %}
+            <ul>
+                <li><a href="{% url creatures-create %}">Create a new creature</a></li>
+            </ul>
+            <ul>
+                {% for creature in creatures %}
+                    <li>
+                        <a href="{% url creatures-details creature.id %}">{{ creature }}</a>
+                    </li>
+                {% empty %}
+                    <li><em>There are no creatures.</em></li>
+                {% endfor %}
+            </ul>
+        {% endblock %}
+    </body>
+</html>
+

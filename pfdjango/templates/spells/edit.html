@@ -1,0 +1,88 @@
+{% extends "spells/default.html" %}
+
+{% block extra_js %}
+{% endblock %}
+
+{% block body %}
+    <h2>Create/Edit {{ spell }}</h2>
+
+    <p class="error" style="color:red;">
+        {{ form.errors }}
+    </p>
+
+    <form action="." method="post">
+        {% csrf_token %}
+        <p>
+            {{ form.name.label }}
+            {{ form.name }}
+        </p>
+        <p>
+            {{ form.effect.label }}
+            {{ form.effect }}
+        </p>
+        <p>
+            {{ form.source.label }} {{ form.source }}
+            {{ form.source_page.label }} {{ form.source_page }}
+        </p>
+        <p>
+            {{ form.school.label }}
+            {{ form.school }}
+
+            {{ form.subschool.label }}
+            {{ form.subschool }}
+        </p>
+        <p>
+            {{ form.descriptor.label }}
+            {{ form.descriptor }}
+        </p>
+        <p>
+            {{ form.casting_time.label }}
+            {{ form.casting_time }}
+        </p>
+        <p>
+            {{ form.components.label }}
+            {{ form.components }}
+        </p>
+        <p>
+            {{ form.components_detail.label }}
+            {{ form.components_detail }}
+        </p>
+        <p>
+            {{ form.duration.label }}
+            {{ form.duration }}
+        </p>
+        <p>
+            {{ form.spell_range.label }}
+            {{ form.spell_range }}
+        </p>
+        <p>
+            {{ form.target.label }}
+            {{ form.target }}
+        </p>
+        <p>
+            {{ form.area.label }}
+            {{ form.area }}
+        </p>
+        <p>
+            {{ form.saving_throw.label }}
+            {{ form.saving_throw }}
+        </p>
+        <p>
+            {{ form.spell_resistance.label }}
+            {{ form.spell_resistance }}
+        </p>
+        <p>
+            {{ form.description.label }}
+            {{ form.description }}
+        </p>
+        <p>
+            {{ form.spell_list.label }}
+            {{ form.spell_list }}
+        </p>
+        <p>
+            <input type="submit" name="submit" value="Submit" />
+            <input type="submit" name="cancel" value="Cancel" />
+        </p>
+    </form>
+{% endblock %}
+

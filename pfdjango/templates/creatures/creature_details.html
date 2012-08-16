@@ -1,0 +1,156 @@
+{% extends "creatures/default.html" %}
+
+{% block extra_css %}
+    <style type="text/css">
+        div.creature {
+            padding: 2em;
+        }
+        div.creature h3 {
+            background-color: black;
+            color: white;
+            text-transform: uppercase;
+            padding: .25em 1em;
+        }
+        div.creature_body {
+            padding: 0 .5em;
+        }
+        div.creature h3:first-letter {
+            font-size: 150%;
+        }
+        div.creature h3 span.creature_cr {
+            float: right;
+            line-height: 200%;
+        }
+        div.creature h4 {
+            border-top: black solid 1px;
+            border-bottom: black solid 1px;
+            text-transform: capitalize;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+
+    <div class="creature">
+        <h2>{{ creature }}</h2>
+        <p class="creature_appearance">
+            {{ creature.appearance }}
+        </p>
+        <h3 class="creature_title">
+            {{ creature }}
+            <span class="creature_cr">
+                CR {{ creature.cr }}
+            </span>
+        </h3>
+
+        <div class="creature_body">
+
+            <div class="creature_info">
+                <div class="creature_xp">
+                    <strong>XP</strong> {{ creature.xp }}
+                </div>
+                <div class="creature_type">
+                    {{ creature.alignment }} 
+                    {{ creature.display_size }} 
+                    {{ creature.display_type }} 
+                    {{ creature.display_subtype }}
+                </div>
+                <div class="creature_senses">
+                    <strong>Init</strong> {{ creature.init }}
+                    <strong>Senses</strong> {{ creature.senses }}
+                    <strong>Perception</strong> {{ creature.perception }}
+                </div>
+            </div>
+
+            <h4>Defense</h4>
+
+            <div class="creature_defense">
+                <div class="creature_ac">
+                    <strong>AC</strong> {{ creature.ac }}
+                </div>
+                <div class="creature_hp">
+                    <strong>hp</strong> {{ creature.hp }}
+                </div>
+                <div class="creature_saves">
+                    <strong>Fort</strong> {{ creature.fort }}, 
+                    <strong>Ref</strong> {{ creature.ref }}, 
+                    <strong>Will</strong> {{ creature.will }}
+                </div>
+            </div>
+
+            <h4>Offense</h4>
+
+            <div class="creature_offense">
+                <div class="creature_speed">
+                    <strong>Speed</strong> {{ creature.speed }}
+                </div>
+                <div class="creature_melee">
+                    <strong>Melee</strong> {{ creature.melee }}
+                </div>
+                <div class="creature_ranged">
+                    <strong>Ranged</strong> {{ creature.rrange }}
+                    {# TODO <strong>Ranged</strong> {{ creature.ranged }} #}
+                </div>
+            </div>
+
+            <h4>Statistics</h4>
+
+            <div class="creature_statistics">
+                <div class="creature_ability_scores">
+                    <strong>Str</strong> {{ creature.strength }}, 
+                    <strong>Dex</strong> {{ creature.dexterity }}, 
+                    <strong>Con</strong> {{ creature.constitution }}, 
+                    <strong>Int</strong> {{ creature.intelligence }}, 
+                    <strong>Wis</strong> {{ creature.wisdom }}, 
+                    <strong>Cha</strong> {{ creature.charisma }}
+                </div>
+                <div class="creature_combat_scores">
+                    <strong>Base Atk</strong> {{ creature.bab }}, 
+                    <strong>CMB</strong> {{ creature.cmb }}, 
+                    <strong>CMD</strong> {{ creature.cmd }}
+                </div>
+                <div class="creature_feats">
+                    <strong>Feats</strong> FEATS TODO
+                </div>
+                <div class="creature_skills">
+                    <strong>Skills</strong> 
+                    {% for skill in creature.skills.all %}
+                        {{ skill }}
+                        {% if not forloop.last %}, {% endif %}
+                    {% endfor %}
+                    <strong>Racial Modifiers</strong> RACIAL MODIFIERS TODO
+                </div>
+                <div class="creature_sq">
+                    <strong>SQ</strong> SPECIAL QUALITIES TODO
+                </div>
+                <div class="creature_languages">
+                    <strong>Languages</strong> LANGUAGES TODO            
+                </div>
+            </div>
+
+            <h4>Ecology</h4>
+
+            <div class="creature_ecology">
+                <div class="creature_environment">
+                    <strong>Environment</strong> {{ creature.environment }}
+                </div>
+                <div class="creature_organization">
+                    <strong>Organization</strong> {{ creature.organization }}
+                </div>
+                <div class="creature_treasure">
+                    <strong>Treasure</strong> {{ creature.treasure }}
+                </div>
+            </div>
+
+            <h4>Special Abilities</h4>
+
+            <div class="creature_special_abilities">
+                TODO SPECIAL ABILITIES
+            </div>
+
+        </div>
+
+    </div>
+
+{% endblock %}
+

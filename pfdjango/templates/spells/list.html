@@ -1,0 +1,11 @@
+{% for spell_list in spell_lists %}
+    <h1>{{ spell_list }}</h1>
+    <ul>
+    {% for spell in spell_list.spells.all %}
+        <li>
+            <a href="{% url spells-details spell.id %}">{{ spell }}</a>
+            {{ spell.effect }}
+        </li>
+    {% endfor %}
+    </ul>
+{% endfor %}
